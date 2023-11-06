@@ -6,28 +6,28 @@ namespace Library
 {
     public class Person
     {
-        private int edad;
+        public int Age { get; set; } // Cambiar "internal set" a "set"
         private string nombre;
-
-        public int Age { get; internal set; }
 
         public Person(string nombre, int edad)
         {
             this.nombre = nombre;
-            this.edad = edad;
+            this.Age = edad; // Establecer la propiedad Age correctamente
         }
-        public string GetNombre(string nombre)
+
+        public string GetNombre()
         {
             return this.nombre;
         }
+
         public int GetEdad()
         {
-            return this.edad;
+            return this.Age; // Cambiar this.edad a this.Age
         }
 
         public void SetEdad(int edad)
         {
-            this.edad = edad;
+            this.Age = edad; // Cambiar this.edad a this.Age
         }
     }
 }
