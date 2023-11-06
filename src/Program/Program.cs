@@ -56,6 +56,21 @@ namespace Program
             {
             Console.WriteLine("No se encontraron hijos en el árbol genealógico.");
             }
+
+            LongestNameVisitor visitorLongestName = new LongestNameVisitor();
+            visitorLongestName.Visit(nEnrique);
+
+            string longestName = visitorLongestName.LongestName;
+            int longestNameLength = visitorLongestName.LongestNameLength;
+
+            if (longestName != null)
+            {
+            Console.WriteLine("La persona con el nombre más largo es: " + longestName + " con una longitud de " + longestNameLength + " caracteres.");
+            }
+            else
+            {
+            Console.WriteLine("No se encontraron nombres en el árbol genealógico.");
+            }
         }
     }
 }
