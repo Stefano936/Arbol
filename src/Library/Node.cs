@@ -6,7 +6,7 @@ namespace Library
 {
     public class Node
     {
-        private Person person;
+        public Person person;
 
         private List<Node> children = new List<Node>();
 
@@ -25,6 +25,11 @@ namespace Library
         public void AddChildren(Node n)
         {
             this.children.Add(n);
+        }
+
+        public void Accept(Visitor visitor)
+        {
+            visitor.Visit(this);
         }
     }
 }

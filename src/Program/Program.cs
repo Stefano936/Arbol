@@ -37,7 +37,8 @@ namespace Program
             nPablo.AddChildren(nMaria);
             nPablo.AddChildren(nOlivia);
 
-            // visitar el árbol aquí
+            Visitor visitorEdadTotal = new AgeSumVisitor();
+            visitorEdadTotal.Visit(nEnrique);
         }
     }
 }

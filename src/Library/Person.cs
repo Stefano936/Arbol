@@ -18,7 +18,7 @@ namespace Library
         {
             return this.nombre;
         }
-        public int GetEdad(int edad)
+        public int GetEdad()
         {
             return this.edad;
         }
