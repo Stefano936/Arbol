@@ -41,6 +41,21 @@ namespace Program
             visitorEdadTotal.Visit(nEnrique);
         
             Console.WriteLine("Suma de edades de todos los integrantes de la familia: " + ((AgeSumVisitor)visitorEdadTotal).TotalAge);
+
+            LargestChildVisitor visitorLargestChild = new LargestChildVisitor();
+            visitorLargestChild.Visit(nEnrique);
+
+            Node largestChild = visitorLargestChild.LargestChild;
+            int largestAge = visitorLargestChild.LargestAge;
+
+            if (largestChild != null)
+            {
+            Console.WriteLine("El hijo mayor es: " + largestChild.person.GetNombre() + " con " + largestAge + " años.");
+            }
+            else
+            {
+            Console.WriteLine("No se encontraron hijos en el árbol genealógico.");
+            }
         }
     }
 }

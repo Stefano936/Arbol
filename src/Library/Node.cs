@@ -16,6 +16,10 @@ namespace Library
                 return this.children.AsReadOnly();
             }
         }
+        public bool IsLeaf
+        {
+            get { return Children.Count == 0; }
+        }
 
         public Node(Person person)
         {
