@@ -8,7 +8,9 @@ namespace Library
     {
         private int edad;
         private string nombre;
-        
+
+        public int Age { get; internal set; }
+
         public Person(string nombre, int edad)
         {
             this.nombre = nombre;

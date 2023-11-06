@@ -39,6 +39,8 @@ namespace Program
 
             Visitor visitorEdadTotal = new AgeSumVisitor();
             visitorEdadTotal.Visit(nEnrique);
+        
+            Console.WriteLine("Suma de edades de todos los integrantes de la familia: " + ((AgeSumVisitor)visitorEdadTotal).TotalAge);
         }
     }
 }

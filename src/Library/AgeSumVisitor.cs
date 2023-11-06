@@ -5,18 +5,18 @@ using Library;
 
 public class AgeSumVisitor : Visitor
 {
-    public int age {get; set; }
+    public int TotalAge { get; private set; }
+
     public override void Visit(Node node)
     {
         if (node.person != null)
         {
-            age += node.person.GetEdad();
+            TotalAge += node.person.Age;
         }
-        foreach(var child in node.Children)
+
+        foreach (Node child in node.Children)
         {
-            child.Accept(this);
+            Visit(child);
         }
-        this.ContentBuilder.Clear();
-        this.ContentBuilder.Append(age);
     }
 }
